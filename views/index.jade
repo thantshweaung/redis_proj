@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  each data in datas
+   li data[0].name
+   li data.email
+    
+  form(action='/', method='post')
+   div(class='col-xs-2')
+    label Name : 
+    input(type='text', class='form-control', name='name')
+   br
+   br
+   br
+   div(class='col-xs-2')
+    label() Email : 
+    input(type='email', class='form-control form-xs', name='email')
+    br
+    input(type='submit', class='btn btn-sm btn-primary', value='保存')

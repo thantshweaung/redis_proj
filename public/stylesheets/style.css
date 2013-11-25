@@ -1,0 +1,13 @@
+@font-face{
+	font-family: love;
+	src: url('../fonts/love.ttf');
+}
+
+body {
+  padding: 50px;
+  font: 20px love, "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}

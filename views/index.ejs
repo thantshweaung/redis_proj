@@ -1,0 +1,59 @@
+<!doctype html>
+	<head> 
+		<title> <%= title %> </title>
+		<link  href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+		<link href='/stylesheets/style.css' rel='stylesheet' type='text/css' />
+	</head>
+	<body> 
+	<div class='container'>
+		<h1> <%= title %> </h1>
+
+		<form action='/' method='post'>
+			<div class='col-xs-2'>
+				<label> 名前 : </label>
+				<input type='text' class='form-control' name='name' />
+			</div>
+			<br />
+			<br />
+			<br />
+			<div class='col-xs-2'>
+				<label> メール : </label>
+				<input type='email' class='form-control form-xs' name='email' />
+			</div>
+			<br />
+			<br />
+			<br />
+			<div class='col-xs-2'>
+				<label> 携帯電話 : </label>
+				<input type='phone' class='form-control form-xs' name='phone' />
+			</div>
+			<br />
+			<br />
+			<br />
+			<br />				
+			&nbsp;&nbsp;&nbsp;<button type='submit' class='btn btn-lg btn-primary'> 登録 </button>
+		</form>
+		<br />
+
+		<table class='table table-bordered table-hover'>
+			<tr>
+				<td> #id </td>
+				<td> 名前 </td>
+				<td> メール </td>
+				<td> 懈怠電話 </td>
+				<td> 行動</td>
+			</tr>	
+			<% datas.forEach(function(data, id){ %>
+			<tr>
+				<td> <%= indexs[id] %></td>
+				<td> <%= data.name %> </td>
+				<td> <%= data.email %> </td>
+				<td> <%= data.phone %> </td>
+				<td> <a class='btn btn-xs btn-warning' href='/contacts/edit/<%= indexs[id] %>'>更新</a>　<a class='btn btn-xs btn-danger' href='/contacts/delete/<%= indexs[id] %>' >削除</a> </td>
+			</tr>
+			<% }); %>
+		</table>
+		<br />
+		</div>
+	</body>
+</html>

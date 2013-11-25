@@ -1,0 +1,39 @@
+<!doctype html>
+	<head> 
+		<title> <%= title %> </title>
+		<link  href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+		<link href='/stylesheets/style.css' rel='stylesheet' type='text/css' />
+	</head>
+	<body> 
+	<div class='container'>
+		<h1> <%= title %> </h1>
+
+		<form action='/contacts/edit/<%= id %>' method='post'>
+			<div class='col-xs-2'>
+				<label> 名前 : </label>
+				<input type='text' class='form-control' name='name' value='<%= data.name %>' />
+			</div>
+			<br />
+			<br />
+			<br />
+			<div class='col-xs-2'>
+				<label> メール : </label>
+				<input type='email' class='form-control form-xs' name='email' value='<%= data.email %>' />
+			</div>
+			<br />
+			<br />
+			<br />
+			<div class='col-xs-2'>
+				<label> 携帯電話 : </label>
+				<input type='phone' class='form-control form-xs' name='phone' value='<%= data.phone %>' />
+			</div>
+			<br />
+			<br />
+			<br />
+			<br />				
+			&nbsp;&nbsp;&nbsp;<button type='submit' class='btn btn-lg btn-primary'> 更新 </button>
+		</form>
+		<br />
+	</div>
+	</body>
+</html>
